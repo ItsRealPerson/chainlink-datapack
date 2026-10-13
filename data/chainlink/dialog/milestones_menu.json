@@ -1,33 +1,71 @@
 {
   "type": "minecraft:multi_action",
   "title": {
-    "text": "🏆 ChainLink — Configuración de Hitos",
-    "color": "light_purple",
+    "text": "HITOS DEL END PORTAL",
+    "color": "#FFD700",
     "bold": true
   },
   "external_title": {
-    "text": "🏆 Hitos ChainLink",
-    "color": "light_purple"
+    "text": "Hitos ChainLink",
+    "color": "#FFD700"
   },
   "pause": false,
   "can_close_with_escape": true,
-  "body": {
-    "type": "minecraft:plain_message",
-    "contents": {
-      "text": "🔒 EL PORTAL DEL END ESTÁ SELLADO HERMÉTICAMENTE\n\nPara desbloquear la dimensión del End y completar el juego, el equipo debe completar la cuota seleccionada de hitos dinámicos del pool de 80 misiones cooperativas.\n\nElige una cuota, re-sortea la lista o consulta tu progreso actual:"
+  "body": [
+    {
+      "type": "minecraft:item",
+      "item": "minecraft:end_portal_frame",
+      "show_tooltip": false,
+      "width": 20,
+      "height": 20,
+      "description": {
+        "width": 260,
+        "contents": [
+          {
+            "text": "SELLADO DEL END: ",
+            "color": "#AA00AA",
+            "bold": true
+          },
+          {
+            "text": "Completa la cuota de hitos para habilitar el Portal.",
+            "color": "#CCCCCC"
+          }
+        ]
+      }
     },
-    "width": 310
-  },
+    {
+      "type": "minecraft:item",
+      "item": "minecraft:nether_star",
+      "show_tooltip": false,
+      "width": 20,
+      "height": 20,
+      "description": {
+        "width": 260,
+        "contents": [
+          {
+            "text": "POOL DINÁMICO: ",
+            "color": "#FFFF55",
+            "bold": true
+          },
+          {
+            "text": "80 Hitos cooperativos (Jefes, Estructuras, Retos).",
+            "color": "#CCCCCC"
+          }
+        ]
+      }
+    }
+  ],
   "columns": 2,
   "actions": [
     {
+      "width": 155,
       "label": {
-        "text": "📜 Ver Hitos en Chat",
-        "color": "yellow",
+        "text": "Ver Hitos Activos",
+        "color": "#FFFF55",
         "bold": true
       },
       "tooltip": {
-        "text": "Imprime en el chat la lista y descripción de todos los hitos activos"
+        "text": "Muestra en el chat la lista de hitos de la partida actual"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -35,13 +73,14 @@
       }
     },
     {
+      "width": 155,
       "label": {
-        "text": "🎲 Re-Sortear Hitos",
-        "color": "gold",
+        "text": "Re-Sortear Hitos",
+        "color": "#FFAA00",
         "bold": true
       },
       "tooltip": {
-        "text": "Sortear un nuevo conjunto aleatorio de hitos del pool de 80"
+        "text": "Genera una nueva selección aleatoria de hitos sin repetir"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -49,12 +88,20 @@
       }
     },
     {
-      "label": {
-        "text": "Cuota: 5 Hitos",
-        "color": "aqua"
-      },
+      "width": 155,
+      "label": [
+        {
+          "text": "Cuota: ",
+          "color": "#AAAAAA"
+        },
+        {
+          "text": "5 Hitos",
+          "color": "#55FFFF",
+          "bold": true
+        }
+      ],
       "tooltip": {
-        "text": "Establecer cuota en 5 hitos para desbloquear el End (Partida Rápida)"
+        "text": "Partida Rápida (5 Hitos requeridos)"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -62,12 +109,20 @@
       }
     },
     {
-      "label": {
-        "text": "Cuota: 10 Hitos",
-        "color": "green"
-      },
+      "width": 155,
+      "label": [
+        {
+          "text": "Cuota: ",
+          "color": "#AAAAAA"
+        },
+        {
+          "text": "10 Hitos",
+          "color": "#55FF55",
+          "bold": true
+        }
+      ],
       "tooltip": {
-        "text": "Establecer cuota en 10 hitos para desbloquear el End (Estándar)"
+        "text": "Partida Estándar (10 Hitos requeridos)"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -75,12 +130,20 @@
       }
     },
     {
-      "label": {
-        "text": "Cuota: 15 Hitos",
-        "color": "gold"
-      },
+      "width": 155,
+      "label": [
+        {
+          "text": "Cuota: ",
+          "color": "#AAAAAA"
+        },
+        {
+          "text": "15 Hitos",
+          "color": "#FFFF55",
+          "bold": true
+        }
+      ],
       "tooltip": {
-        "text": "Establecer cuota en 15 hitos para desbloquear el End (Desafío)"
+        "text": "Partida Media (15 Hitos requeridos)"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -88,12 +151,20 @@
       }
     },
     {
-      "label": {
-        "text": "Cuota: 20 Hitos",
-        "color": "red"
-      },
+      "width": 155,
+      "label": [
+        {
+          "text": "Cuota: ",
+          "color": "#AAAAAA"
+        },
+        {
+          "text": "20 Hitos",
+          "color": "#FFAA00",
+          "bold": true
+        }
+      ],
       "tooltip": {
-        "text": "Establecer cuota en 20 hitos para desbloquear el End (Experto)"
+        "text": "Partida Larga (20 Hitos requeridos)"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -101,12 +172,20 @@
       }
     },
     {
-      "label": {
-        "text": "Cuota: 25 Hitos",
-        "color": "dark_purple"
-      },
+      "width": 155,
+      "label": [
+        {
+          "text": "Cuota: ",
+          "color": "#AAAAAA"
+        },
+        {
+          "text": "25 Hitos",
+          "color": "#FF5555",
+          "bold": true
+        }
+      ],
       "tooltip": {
-        "text": "Establecer cuota en 25 hitos para desbloquear el End (Maestría)"
+        "text": "Partida Experta (25 Hitos requeridos)"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -114,12 +193,20 @@
       }
     },
     {
-      "label": {
-        "text": "Cuota: 30 Hitos",
-        "color": "dark_red"
-      },
+      "width": 155,
+      "label": [
+        {
+          "text": "Cuota: ",
+          "color": "#AAAAAA"
+        },
+        {
+          "text": "30 Hitos",
+          "color": "#FF55FF",
+          "bold": true
+        }
+      ],
       "tooltip": {
-        "text": "Establecer cuota en 30 hitos para desbloquear el End (Odisea Total)"
+        "text": "Partida Maratón (30 Hitos requeridos)"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -127,12 +214,13 @@
       }
     },
     {
+      "width": 155,
       "label": {
-        "text": "⏩ Forzar +1 Hito (Admin)",
-        "color": "gray"
+        "text": "Saltar +1 Hito (Admin)",
+        "color": "#AAAAAA"
       },
       "tooltip": {
-        "text": "Completar forzadamente el primer hito pendiente (Depuración)"
+        "text": "Suma +1 al contador de hitos completados"
       },
       "action": {
         "type": "minecraft:run_command",
@@ -140,38 +228,29 @@
       }
     },
     {
+      "width": 155,
       "label": {
-        "text": "🔓 Desbloquear End (Admin)",
-        "color": "dark_green"
+        "text": "Abrir End (Admin)",
+        "color": "#55FF55"
       },
       "tooltip": {
-        "text": "Abrir inmediatamente el portal del End sin completar la cuota"
+        "text": "Desbloquea el Portal del End manualmente"
       },
       "action": {
         "type": "minecraft:run_command",
         "command": "/function chainlink:milestones/unlock_end"
       }
-    },
-    {
-      "label": {
-        "text": "⬅ Volver al Menú Principal",
-        "color": "white",
-        "bold": true
-      },
-      "tooltip": {
-        "text": "Regresar a la pantalla de roles y topología 4P"
-      },
-      "action": {
-        "type": "minecraft:show_dialog",
-        "dialog": "chainlink:main_menu"
-      }
     }
   ],
   "exit_action": {
     "label": {
-      "text": "Cerrar",
-      "color": "gray"
+      "text": "« Volver al Menú Principal",
+      "color": "#FFFFFF"
     },
-    "width": 200
+    "width": 314,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "/function chainlink:menu"
+    }
   }
 }
