@@ -50,7 +50,10 @@ execute unless score #pair_cd_hp chainlink.state matches 1.. run scoreboard play
 scoreboard players set #pair_ab_hp_display chainlink.state 20
 scoreboard players set #pair_cd_hp_display chainlink.state 20
 
-# 7. Mensaje de Carga y Bienvenida en Chat
+# 7. Inicializar Sistema de Hitos y Bloqueo de End
+function chainlink:milestones/init
+
+# 8. Mensaje de Carga y Bienvenida en Chat
 tellraw @a ""
 tellraw @a [{"text":"[ChainLink] ","color":"gold","bold":true},{"text":"Datapack cargado con éxito para MC 26.2/26.3. ","color":"green"}]
 tellraw @a [{"text":"[ChainLink] ","color":"gold","bold":true},{"text":"Haz clic aquí para abrir el ","color":"yellow"},{"text":"[MENÚ DE ROLES]","color":"aqua","bold":true,"underlined":true,"click_event":{"action":"run_command","command":"/function chainlink:menu"},"hover_event":{"action":"show_text","value":"Haz clic para abrir el menú interactivo"}},{"text":" o escribe /function chainlink:menu","color":"gray"}]

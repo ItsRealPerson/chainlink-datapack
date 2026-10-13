@@ -144,6 +144,8 @@ function packVersionParts(input, field, maxMinorForShortForm) {
 
 function evaluateFilter(input, filter) {
   switch (normalizeFilter(filter)) {
+    case ".":
+      return [input];
     case "empty":
       return [];
     case ".pack.pack_format|numbers":
