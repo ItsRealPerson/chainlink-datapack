@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "minecraft-commands-scripting": {
+      "source": "jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-commands-scripting/SKILL.md",
+      "computedHash": "39613eb4adb8df0b05d06376f9e3c5ad2ade36753d12437be288e6fe28478c06"
+    },
+    "minecraft-datapack": {
+      "source": "jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-datapack/SKILL.md",
+      "computedHash": "a9bff63585978be537777c50314450839615b89d223b8d633a1343607dea621f"
+    }
+  }
+}
