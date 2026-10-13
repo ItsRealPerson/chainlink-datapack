@@ -18,7 +18,7 @@ tag @a remove chainlink_dead
 scoreboard players reset @a chainlink.deaths
 
 # 4. Asegurar salud máxima vanilla
-attribute @a minecraft:max_health base set 20.0
+execute as @a run attribute @s minecraft:max_health base set 20.0
 
 # 5. Anuncio sonoro y visual a todos los jugadores
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1.0 1.0

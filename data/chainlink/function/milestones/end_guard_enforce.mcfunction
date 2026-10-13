@@ -3,7 +3,7 @@
 # ========================================================
 
 # 1. Eject any players found in the End dimension
-execute in minecraft:the_end as @a at @s run function chainlink:milestones/end_guard_eject
+execute as @a at @s if dimension minecraft:the_end run function chainlink:milestones/end_guard_eject
 
 # 2. Block and dissolve End Portals near players in the Overworld
-execute in minecraft:overworld as @a[gamemode=!spectator] at @s run function chainlink:milestones/end_guard_overworld
+execute as @a[gamemode=!spectator] at @s if dimension minecraft:overworld run function chainlink:milestones/end_guard_overworld

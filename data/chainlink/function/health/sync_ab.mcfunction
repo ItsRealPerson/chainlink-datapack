@@ -34,13 +34,11 @@ execute if score #min_hp_ab chainlink.state >= #pair_ab_hp chainlink.state if sc
 
 # 8. Sincronizar A si difiere de la salud del par
 execute store result storage chainlink:tmp target_hp_float float 0.01 run scoreboard players get #pair_ab_hp chainlink.state
-execute if score #a_hp chainlink.hp != #pair_ab_hp chainlink.state run data modify storage chainlink:tmp target set value "@a[tag=chainlink_A,gamemode=!spectator]"
-execute if score #a_hp chainlink.hp != #pair_ab_hp chainlink.state run function chainlink:health/clamp_hp with storage chainlink:tmp
+execute unless score #a_hp chainlink.hp = #pair_ab_hp chainlink.state as @a[tag=chainlink_A,gamemode=!spectator,limit=1] run function chainlink:health/clamp_hp with storage chainlink:tmp
 
 # 9. Sincronizar B si difiere de la salud del par
 execute store result storage chainlink:tmp target_hp_float float 0.01 run scoreboard players get #pair_ab_hp chainlink.state
-execute if score #b_hp chainlink.hp != #pair_ab_hp chainlink.state run data modify storage chainlink:tmp target set value "@a[tag=chainlink_B,gamemode=!spectator]"
-execute if score #b_hp chainlink.hp != #pair_ab_hp chainlink.state run function chainlink:health/clamp_hp with storage chainlink:tmp
+execute unless score #b_hp chainlink.hp = #pair_ab_hp chainlink.state as @a[tag=chainlink_B,gamemode=!spectator,limit=1] run function chainlink:health/clamp_hp with storage chainlink:tmp
 
 # 10. Actualizar visualizador de salud para actionbar
 scoreboard players operation #pair_ab_hp_display chainlink.state = #pair_ab_hp chainlink.state

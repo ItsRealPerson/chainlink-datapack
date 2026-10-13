@@ -4,12 +4,12 @@
 # ========================================================
 
 # Announce to all players in chat
-$tellraw @a ""
-$tellraw @a [{"text":"========================================","color":"dark_green"}]
+tellraw @a ""
+tellraw @a [{"text":"========================================","color":"dark_green"}]
 $tellraw @a [{"text":" ★ HITO COMPLETADO: ","color":"green","bold":true},{"text":"$(name)","color":"gold","bold":true},{"text":" [$(category)]","color":"gray"}]
 $tellraw @a [{"text":"   ↳ ","color":"dark_gray"},{"text":"$(desc)","color":"yellow"}]
-$tellraw @a [{"text":"========================================","color":"dark_green"}]
-$tellraw @a ""
+tellraw @a [{"text":"========================================","color":"dark_green"}]
+tellraw @a ""
 
 # Play triumph sounds
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1.0 1.2

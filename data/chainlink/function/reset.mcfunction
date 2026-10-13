@@ -15,7 +15,7 @@ data modify storage chainlink:sync da_inv set value []
 data modify storage chainlink:sync da_equip set value {}
 
 # 4. Restablecer atributos y pantallas
-attribute @a minecraft:max_health base set 20.0
+execute as @a run attribute @s minecraft:max_health base set 20.0
 title @a clear
 title @a reset
 

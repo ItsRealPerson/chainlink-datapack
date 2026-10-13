@@ -54,3 +54,12 @@ Todos los cambios notables de este proyecto se documentan de forma incremental y
   - Plan de implementación en `docs/planes/plan_v2_dialog_system.md`.
   - Guía técnica detallada de uso en `docs/guias/guia_dialogos_nativos_26_3.md`.
 
+
+## [v1.1.1] - 2026-10-12
+### Corregido
+- **Fix Bucle de Expulsión del End (`end_guard_enforce.mcfunction`)**: Se corrigió `execute in minecraft:the_end as @a` (que seleccionaba a todos los jugadores de cualquier dimensión y los teletransportaba a `0 100 0` cada tick) por `execute as @a at @s if dimension minecraft:the_end`, afectando únicamente a jugadores que realmente entren a The End.
+- **Diálogos Inline Instantáneos (`menu.mcfunction` y `milestones/menu.mcfunction`)**: Se incrustó la definición JSON/SNBT directamente en `dialog show @s {...}` para que `/reload` funcione en caliente sin requerir salir y volver a entrar al mundo por registros estáticos (`minecraft:dialog`).
+- **Correcciones de Sintaxis Estricta 26.3**:
+  - `health/sync_ab.mcfunction` y `health/sync_cd.mcfunction`: Reemplazo de `if score ... != ...` por `unless score ... = ...`.
+  - `start.mcfunction` y `reset.mcfunction`: Reemplazo de `attribute @a` por `execute as @a run attribute @s`.
+  - `milestones/on_complete.mcfunction`: Eliminación del prefijo macro `$` en líneas estáticas sin variables `$(...)`.
