@@ -28,7 +28,7 @@ bossbar set chainlink:progress name [{"text":"Progreso del Nexo: ","color":"gold
 # Broadcast notification
 tellraw @a ""
 tellraw @a [{"text":"[ChainLink] ","color":"dark_purple","bold":true},{"text":"¡Se han sorteado ","color":"gold"},{"score":{"name":"#milestones_req","objective":"chainlink.config"},"color":"yellow","bold":true},{"text":" hitos aleatorios para esta partida!","color":"gold"}]
-tellraw @a [{"text":"Usa ","color":"gray"},{"text":"[📜 Ver Hitos Activos]","color":"yellow","underlined":true,"clickEvent":{"action":"run_command","value":"/function chainlink:milestones/list"}},{"text":" para consultar los objetivos.","color":"gray"}]
+tellraw @a [{"text":"Usa ","color":"gray"},{"text":"[📜 Ver Hitos Activos]","color":"yellow","underlined":true,"click_event":{"action":"run_command","command":"/function chainlink:milestones/list"}},{"text":" para consultar los objetivos.","color":"gray"}]
 tellraw @a ""
 
 playsound minecraft:block.enchantment_table.use master @a ~ ~ ~ 1.0 1.0

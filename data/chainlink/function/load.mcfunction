@@ -35,7 +35,6 @@ team modify chainlink_D prefix {"text":"[D] ","color":"aqua","bold":true}
 team modify chainlink_D friendlyFire false
 
 # 4. Reglas de Juego Fundamentales (Muerte real para penalización de inventario)
-gamerule keepInventory false
 gamerule minecraft:keep_inventory false
 
 # 5. Inicialización de Almacenamiento NBT de Sincronización

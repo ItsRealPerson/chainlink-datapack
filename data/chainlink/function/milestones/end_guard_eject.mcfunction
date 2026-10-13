@@ -17,4 +17,4 @@ title @s subtitle {"text":"El Nexo del End está sellado por los hitos.","color"
 playsound minecraft:entity.elder_guardian.curse player @s ~ ~ ~ 1.0 0.8
 playsound minecraft:block.chest.locked player @s ~ ~ ~ 1.0 0.5
 
-tellraw @s [{"text":"[ChainLink] ","color":"dark_purple","bold":true},{"text":"¡Has sido expulsado del End! Completa todos los hitos antes de ingresar. ","color":"red"},{"text":"[Ver Hitos]","color":"yellow","underlined":true,"clickEvent":{"action":"run_command","value":"/function chainlink:milestones/status"}}]
+tellraw @s [{"text":"[ChainLink] ","color":"dark_purple","bold":true},{"text":"¡Has sido expulsado del End! Completa todos los hitos antes de ingresar. ","color":"red"},{"text":"[Ver Hitos]","color":"yellow","underlined":true,"click_event":{"action":"run_command","command":"/function chainlink:milestones/status"}}]
