@@ -1,0 +1,136 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "⛓ ChainLink Co-op — Menú Principal ⛓",
+    "color": "gold",
+    "bold": true
+  },
+  "external_title": {
+    "text": "⛓ ChainLink Co-op ⛓",
+    "color": "gold"
+  },
+  "pause": false,
+  "can_close_with_escape": true,
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "⛓ TOPOLOGÍA DE VÍNCULOS EN CADENA (4P):\n\n❤ A ↔ B: Vínculo de SALUD (daño y curación)\n📦 B ↔ C: Vínculo de INVENTARIO 1:1 (slots y armadura)\n❤ C ↔ D: Vínculo de SALUD (daño y curación)\n📦 D ↔ A: Vínculo de INVENTARIO 1:1 (slots y armadura)\n\nElige un rol para unirte o sortéalos al azar:"
+    },
+    "width": 310
+  },
+  "columns": 2,
+  "actions": [
+    {
+      "label": {
+        "text": "Rol A (Vida B / Inv D)",
+        "color": "red"
+      },
+      "tooltip": {
+        "text": "Asignarte el Rol A: Vida enlazada con B, Inventario con D"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:roles/assign_a"
+      }
+    },
+    {
+      "label": {
+        "text": "Rol B (Vida A / Inv C)",
+        "color": "gold"
+      },
+      "tooltip": {
+        "text": "Asignarte el Rol B: Vida enlazada con A, Inventario con C"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:roles/assign_b"
+      }
+    },
+    {
+      "label": {
+        "text": "Rol C (Vida D / Inv B)",
+        "color": "green"
+      },
+      "tooltip": {
+        "text": "Asignarte el Rol C: Vida enlazada con D, Inventario con B"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:roles/assign_c"
+      }
+    },
+    {
+      "label": {
+        "text": "Rol D (Vida C / Inv A)",
+        "color": "aqua"
+      },
+      "tooltip": {
+        "text": "Asignarte el Rol D: Vida enlazada con C, Inventario con A"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:roles/assign_d"
+      }
+    },
+    {
+      "label": {
+        "text": "🎲 Sortear Roles al Azar",
+        "color": "light_purple"
+      },
+      "tooltip": {
+        "text": "Asigna roles A, B, C y D aleatoriamente a los 4 jugadores"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:roles/random"
+      }
+    },
+    {
+      "label": {
+        "text": "▶ INICIAR PARTIDA",
+        "color": "dark_green",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Inicia la sincronización activa de vínculos de vida e inventario"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:start"
+      }
+    },
+    {
+      "label": {
+        "text": "🏆 Menú de Hitos",
+        "color": "yellow"
+      },
+      "tooltip": {
+        "text": "Abrir el panel de configuración de hitos del End Portal"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "chainlink:milestones_menu"
+      }
+    },
+    {
+      "label": {
+        "text": "🔄 Reiniciar Partida",
+        "color": "dark_red"
+      },
+      "tooltip": {
+        "text": "Detiene la partida y limpia los roles y vínculos"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:reset"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Cerrar",
+      "color": "gray"
+    },
+    "width": 200
+  }
+}

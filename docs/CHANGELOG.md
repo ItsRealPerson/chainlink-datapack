@@ -39,3 +39,18 @@ Todos los cambios notables de este proyecto se documentan de forma incremental y
 - **Empaquetado ZIP POSIX (Fix `Unknown function chainlink:menu`)**: Se reemplazó `Compress-Archive` de PowerShell (que guardaba separadores de ruta con barra invertida `\` de Windows, ignorados por el cargador de recursos de Minecraft) por empaquetado POSIX con barras normales `/`.
 - **Sintaxis estricta 26.3**: Se eliminó `gamerule keepInventory false` (dejando únicamente `gamerule minecraft:keep_inventory false`) en `load.mcfunction` y se unificaron todos los eventos `click_event` en `data/chainlink/function/milestones/`.
 - **Esquema de Predicados MC 26.3 (`type` y `structures`)**: Se actualizaron los 14 archivos JSON en `data/chainlink/predicate/` reemplazando `"condition"` por `"type"` y `"structure"` por `"structures"` según el nuevo codec de predicados de Minecraft 26.3.
+
+## [v1.1.0] - 2026-10-12
+### Añadido
+- **Sistema Nativo de Formularios / Diálogos en Minecraft 26.3 (`dialog/`)**:
+  - `data/chainlink/dialog/main_menu.json`: Diálogo interactivo nativo (`minecraft:multi_action`) con distribución en 2 columnas, explicación gráfica de la topología 4P (A-B Salud, B-C Inventario, C-D Salud, D-A Inventario), botones de asignación de roles A/B/C/D, sorteo al azar, inicio, reseteo y botón de acceso directo client-side al menú de hitos.
+  - `data/chainlink/dialog/milestones_menu.json`: Diálogo nativo (`minecraft:multi_action`) para configuración y visualización de hitos, selector de cuota de 5 a 30 hitos, re-sorteo, forzado administrativo, apertura manual del End y botón de retorno al menú principal.
+  - `data/minecraft/tags/dialog/pause_screen_additions.json`: Registro de `chainlink:main_menu` para acceso directo desde la pantalla de Escape / Pausa del juego en Minecraft 26.3.
+  - `data/minecraft/tags/dialog/quick_actions.json`: Registro de `chainlink:main_menu` para apertura instantánea mediante la tecla `G` (Acciones Rápidas) de Minecraft 26.3.
+- **Integración con Comandos `/dialog show`**:
+  - `data/chainlink/function/menu.mcfunction` actualizado para ejecutar `dialog show @s chainlink:main_menu` (o `@a` si se ejecuta desde consola) manteniendo respaldo tellraw en chat.
+  - `data/chainlink/function/milestones/menu.mcfunction` actualizado para ejecutar `dialog show @s chainlink:milestones_menu` con soporte de fallback.
+- **Documentación de Diálogos**:
+  - Plan de implementación en `docs/planes/plan_v2_dialog_system.md`.
+  - Guía técnica detallada de uso en `docs/guias/guia_dialogos_nativos_26_3.md`.
+

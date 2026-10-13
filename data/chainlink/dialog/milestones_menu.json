@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "🏆 ChainLink — Configuración de Hitos",
+    "color": "light_purple",
+    "bold": true
+  },
+  "external_title": {
+    "text": "🏆 Hitos ChainLink",
+    "color": "light_purple"
+  },
+  "pause": false,
+  "can_close_with_escape": true,
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "🔒 EL PORTAL DEL END ESTÁ SELLADO HERMÉTICAMENTE\n\nPara desbloquear la dimensión del End y completar el juego, el equipo debe completar la cuota seleccionada de hitos dinámicos del pool de 80 misiones cooperativas.\n\nElige una cuota, re-sortea la lista o consulta tu progreso actual:"
+    },
+    "width": 310
+  },
+  "columns": 2,
+  "actions": [
+    {
+      "label": {
+        "text": "📜 Ver Hitos en Chat",
+        "color": "yellow",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Imprime en el chat la lista y descripción de todos los hitos activos"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/list"
+      }
+    },
+    {
+      "label": {
+        "text": "🎲 Re-Sortear Hitos",
+        "color": "gold",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Sortear un nuevo conjunto aleatorio de hitos del pool de 80"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/roll"
+      }
+    },
+    {
+      "label": {
+        "text": "Cuota: 5 Hitos",
+        "color": "aqua"
+      },
+      "tooltip": {
+        "text": "Establecer cuota en 5 hitos para desbloquear el End (Partida Rápida)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/set_5"
+      }
+    },
+    {
+      "label": {
+        "text": "Cuota: 10 Hitos",
+        "color": "green"
+      },
+      "tooltip": {
+        "text": "Establecer cuota en 10 hitos para desbloquear el End (Estándar)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/set_10"
+      }
+    },
+    {
+      "label": {
+        "text": "Cuota: 15 Hitos",
+        "color": "gold"
+      },
+      "tooltip": {
+        "text": "Establecer cuota en 15 hitos para desbloquear el End (Desafío)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/set_15"
+      }
+    },
+    {
+      "label": {
+        "text": "Cuota: 20 Hitos",
+        "color": "red"
+      },
+      "tooltip": {
+        "text": "Establecer cuota en 20 hitos para desbloquear el End (Experto)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/set_20"
+      }
+    },
+    {
+      "label": {
+        "text": "Cuota: 25 Hitos",
+        "color": "dark_purple"
+      },
+      "tooltip": {
+        "text": "Establecer cuota en 25 hitos para desbloquear el End (Maestría)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/set_25"
+      }
+    },
+    {
+      "label": {
+        "text": "Cuota: 30 Hitos",
+        "color": "dark_red"
+      },
+      "tooltip": {
+        "text": "Establecer cuota en 30 hitos para desbloquear el End (Odisea Total)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/set_30"
+      }
+    },
+    {
+      "label": {
+        "text": "⏩ Forzar +1 Hito (Admin)",
+        "color": "gray"
+      },
+      "tooltip": {
+        "text": "Completar forzadamente el primer hito pendiente (Depuración)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/force_skip"
+      }
+    },
+    {
+      "label": {
+        "text": "🔓 Desbloquear End (Admin)",
+        "color": "dark_green"
+      },
+      "tooltip": {
+        "text": "Abrir inmediatamente el portal del End sin completar la cuota"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function chainlink:milestones/unlock_end"
+      }
+    },
+    {
+      "label": {
+        "text": "⬅ Volver al Menú Principal",
+        "color": "white",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Regresar a la pantalla de roles y topología 4P"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "chainlink:main_menu"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Cerrar",
+      "color": "gray"
+    },
+    "width": 200
+  }
+}

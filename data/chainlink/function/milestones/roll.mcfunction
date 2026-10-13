@@ -9,6 +9,32 @@ scoreboard players set #milestones_done chainlink.state 0
 scoreboard players set #end_unlocked chainlink.state 0
 scoreboard players set #rolled chainlink.state 1
 
+# Reset milestone tracking stats on players for a fresh match roll
+scoreboard players reset * cl_k_warden
+scoreboard players reset * cl_k_wither
+scoreboard players reset * cl_k_elder_g
+scoreboard players reset * cl_k_breeze
+scoreboard players reset * cl_k_evoker
+scoreboard players reset * cl_k_ravager
+scoreboard players reset * cl_k_brute
+scoreboard players reset * cl_k_ghast
+scoreboard players reset * cl_k_blaze
+scoreboard players reset * cl_k_w_skel
+scoreboard players reset * cl_k_bogged
+scoreboard players reset * cl_k_phantom
+scoreboard players reset * cl_k_witch
+scoreboard players reset * cl_k_magma
+scoreboard players reset * cl_k_enderman
+scoreboard players reset * cl_k_creeper
+scoreboard players reset * cl_dmg_shield
+scoreboard players reset * cl_u_ominous
+scoreboard players reset * cl_breed_anim
+scoreboard players reset * cl_eat_cake
+scoreboard players reset * cl_play_record
+scoreboard players reset * cl_bell_ring
+scoreboard players reset * cl_drink_honey
+scoreboard players reset * cl_mine_wheat
+
 # Reset storage lists
 data modify storage chainlink:milestones active set value []
 data modify storage chainlink:milestones temp_pool set from storage chainlink:milestones pool
