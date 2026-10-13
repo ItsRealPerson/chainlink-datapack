@@ -38,3 +38,4 @@ Todos los cambios notables de este proyecto se documentan de forma incremental y
 ### Corregido
 - **Empaquetado ZIP POSIX (Fix `Unknown function chainlink:menu`)**: Se reemplazó `Compress-Archive` de PowerShell (que guardaba separadores de ruta con barra invertida `\` de Windows, ignorados por el cargador de recursos de Minecraft) por empaquetado POSIX con barras normales `/`.
 - **Sintaxis estricta 26.3**: Se eliminó `gamerule keepInventory false` (dejando únicamente `gamerule minecraft:keep_inventory false`) en `load.mcfunction` y se unificaron todos los eventos `click_event` en `data/chainlink/function/milestones/`.
+- **Esquema de Predicados MC 26.3 (`type` y `structures`)**: Se actualizaron los 14 archivos JSON en `data/chainlink/predicate/` reemplazando `"condition"` por `"type"` y `"structure"` por `"structures"` según el nuevo codec de predicados de Minecraft 26.3.

@@ -1,6 +1,6 @@
 {
-  "condition": "minecraft:location_check",
   "predicate": {
-    "structure": "minecraft:nether_fossil"
-  }
+    "structures": "minecraft:nether_fossil"
+  },
+  "type": "minecraft:location_check"
 }

@@ -1,5 +1,4 @@
 {
-  "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
     "equipment": {
@@ -16,5 +15,6 @@
         "items": "minecraft:netherite_boots"
       }
     }
-  }
+  },
+  "type": "minecraft:entity_properties"
 }

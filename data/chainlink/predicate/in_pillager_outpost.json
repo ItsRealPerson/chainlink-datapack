@@ -1,6 +1,6 @@
 {
-  "condition": "minecraft:location_check",
   "predicate": {
-    "structure": "minecraft:pillager_outpost"
-  }
+    "structures": "minecraft:pillager_outpost"
+  },
+  "type": "minecraft:location_check"
 }

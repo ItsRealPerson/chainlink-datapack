@@ -1,6 +1,6 @@
 {
-  "condition": "minecraft:location_check",
   "predicate": {
-    "structure": "minecraft:jungle_pyramid"
-  }
+    "structures": "minecraft:jungle_pyramid"
+  },
+  "type": "minecraft:location_check"
 }

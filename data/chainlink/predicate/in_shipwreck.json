@@ -1,6 +1,6 @@
 {
-  "condition": "minecraft:location_check",
   "predicate": {
-    "structure": "minecraft:shipwreck"
-  }
+    "structures": "minecraft:shipwreck"
+  },
+  "type": "minecraft:location_check"
 }
