@@ -33,3 +33,8 @@ Todos los cambios notables de este proyecto se documentan de forma incremental y
   - Menú interactivo en chat (`menu.mcfunction`), comandos de cuota rápida (`set_5` a `set_30`), listado de hitos con iconos de estado (`list.mcfunction`, `list_item.mcfunction`) y resumen (`status.mcfunction`).
   - Creación de 14 predicados de localización y equipamiento en `data/chainlink/predicate/`.
   - Soporte de extensión dinámica mediante `custom_add.mcfunction`.
+
+## [v1.0.1] - 2026-10-12
+### Corregido
+- **Empaquetado ZIP POSIX (Fix `Unknown function chainlink:menu`)**: Se reemplazó `Compress-Archive` de PowerShell (que guardaba separadores de ruta con barra invertida `\` de Windows, ignorados por el cargador de recursos de Minecraft) por empaquetado POSIX con barras normales `/`.
+- **Sintaxis estricta 26.3**: Se eliminó `gamerule keepInventory false` (dejando únicamente `gamerule minecraft:keep_inventory false`) en `load.mcfunction` y se unificaron todos los eventos `click_event` en `data/chainlink/function/milestones/`.
